@@ -6,13 +6,85 @@
   box-sizing: border-box;
 }
 
+/* Define Color Palette */
+:root {
+  --primary-color: #1b5ea3;
+  --secondary-color: #3a92ba;
+  --danger-color: #e74c3c;
+  --warning-color: #f39c12;
+  --light: #fff;
+  --dark: #000;
+}
+
 /* Basic page setup */
 body {
   font-family: "Inter", sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-  padding: 20px;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+h1 {
+  line-height: 1;
+}
+
+/* Basic Button Styles */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+/* Button Colors */
+button.primary {
+  background-color: var(--primary-color); /* Primary button color */
+  color: var(--light);
+}
+
+button.secondary {
+  background-color: var(--secondary-color); /* Secondary button color */
+  color: var(--light);
+}
+
+button.tertiary {
+  background-color: var(--light);
+  color: var(--dark);
+  border: solid 1px var(--dark);
+}
+
+/* Header Styles */
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--light);
+  padding: 1rem 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+/* Logo */
+.logo img {
+  height: 50px;
+}
+
+/* Nav Links */
+.nav a {
+  text-decoration: none;
+  color: var(--dark);
+  padding: 10px;
+}
+
+.nav a:hover {
+  color: var(--primary-color);
+}
+
+.nav-link.active {
+  border-bottom: solid 2px var(--primary-color);
 }
 
 /* ===== FLEX UTILITIES ===== */
