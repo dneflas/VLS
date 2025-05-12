@@ -1,0 +1,249 @@
+/* ===== RESET ===== */
+/* Reset some default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic page setup */
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+
+/* ===== FLEX UTILITIES ===== */
+.d-flex {
+  display: flex;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.align-self-start {
+  align-self: flex-start;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
+/* ===== GRID SYSTEM (12 COLUMNS) ===== */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+[class*="col-"] {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  flex: 0 0 auto;
+}
+
+.col-1 {
+  width: 8.3333%;
+}
+.col-2 {
+  width: 16.6666%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.3333%;
+}
+.col-5 {
+  width: 41.6666%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.3333%;
+}
+.col-8 {
+  width: 66.6666%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.3333%;
+}
+.col-11 {
+  width: 91.6666%;
+}
+.col-12 {
+  width: 100%;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+@media (min-width: 576px) {
+  .sm-col-6 {
+    width: 50%;
+  }
+  .sm-col-12 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .md-col-4 {
+    width: 33.3333%;
+  }
+  .md-col-6 {
+    width: 50%;
+  }
+  .md-col-12 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .lg-col-3 {
+    width: 25%;
+  }
+  .lg-col-6 {
+    width: 50%;
+  }
+  .lg-col-12 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .xl-col-2 {
+    width: 16.6666%;
+  }
+  .xl-col-4 {
+    width: 33.3333%;
+  }
+  .xl-col-6 {
+    width: 50%;
+  }
+}
+
+/* ===== SPACING UTILITIES ===== */
+:root {
+  --space-unit: 0.5rem;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+.mt-1 {
+  margin-top: var(--space-unit);
+}
+.mb-1 {
+  margin-bottom: var(--space-unit);
+}
+.ml-1 {
+  margin-left: var(--space-unit);
+}
+.mr-1 {
+  margin-right: var(--space-unit);
+}
+.mx-1 {
+  margin-left: var(--space-unit);
+  margin-right: var(--space-unit);
+}
+.my-1 {
+  margin-top: var(--space-unit);
+  margin-bottom: var(--space-unit);
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+.pt-1 {
+  padding-top: var(--space-unit);
+}
+.pb-1 {
+  padding-bottom: var(--space-unit);
+}
+.pl-1 {
+  padding-left: var(--space-unit);
+}
+.pr-1 {
+  padding-right: var(--space-unit);
+}
+.px-1 {
+  padding-left: var(--space-unit);
+  padding-right: var(--space-unit);
+}
+.py-1 {
+  padding-top: var(--space-unit);
+  padding-bottom: var(--space-unit);
+}
+
+/* Add more spacing levels if needed */
