@@ -1,6 +1,9 @@
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
 
+//   get current year for footer
+document.getElementById("year").textContent = new Date().getFullYear();
+
 //Create nav active classes based on scroll
 window.addEventListener("scroll", () => {
   let current = "";
