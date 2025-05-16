@@ -38,6 +38,10 @@ a:hover {
   color: var(--secondary-color);
 }
 
+section {
+  scroll-margin-top: 89px;
+}
+
 /* Basic Button Styles */
 button {
   padding: 10px 20px;
