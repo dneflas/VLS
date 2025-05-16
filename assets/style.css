@@ -29,6 +29,15 @@ h1 {
   line-height: 1;
 }
 
+a {
+  text-decoration: none;
+  color: var(--dark);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
 /* Basic Button Styles */
 button {
   padding: 10px 20px;
@@ -74,7 +83,6 @@ button.tertiary {
   font-size: 12px;
 }
 .site-footer a {
-  text-decoration: none;
   color: var(--gray);
 }
 
@@ -92,8 +100,6 @@ button.tertiary {
 
 /* Nav Links */
 .nav a {
-  text-decoration: none;
-  color: var(--dark);
   padding: 10px;
 }
 
@@ -103,6 +109,18 @@ button.tertiary {
 
 .nav-link.active {
   border-bottom: solid 2px var(--primary-color);
+}
+/* FORM STYLING */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* ===== FLEX UTILITIES ===== */
