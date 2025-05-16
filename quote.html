@@ -45,24 +45,126 @@
       </div>
     </header>
     <!-- QUOTE FORM -->
-    <form action="">
-      <label>
-        <input type="checkbox" name="services" value="interpreting" />
-        Interpreting </label
-      ><br />
+    <section class="container">
+      <h1>
+        Let’s Talk Details —<br />
+        Get Your Custom Quote Today!
+      </h1>
 
-      <label>
-        <input type="checkbox" name="services" value="translation" />
-        Translation </label
-      ><br />
-
-      <label>
-        <input type="checkbox" name="services" value="consultation" />
-        Consultation </label
-      ><br /><br />
-
-      <button class="primary" type="submit">Submit</button>
-    </form>
+      <form action="" class="container">
+        <!-- Type of service fieldset -->
+        <fieldset id="typeOfServiceField">
+          <legend>Type of Service*</legend>
+          <label>
+            <input type="checkbox" name="services" value="interpreting" />
+            Interpreting
+          </label>
+          <label>
+            <input type="checkbox" name="services" value="translation" />
+            Translation
+          </label>
+          <label>
+            <input type="checkbox" name="services" value="consultation" />
+            Consultation
+          </label>
+        </fieldset>
+        <div class="row">
+          <div class="col-6">
+            <!-- name -->
+            <label for="name" class="visually-hidden">Name*</label><br />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name*"
+              required
+            />
+            <!-- email -->
+            <label for="email" class="visually-hidden">Email*</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email*"
+              required
+            />
+            <!-- phone -->
+            <label for="phone" class="visually-hidden">Phone Number</label
+            ><br />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Phone Number"
+            />
+            <!-- duration -->
+            <label for="duration" class="visually-hidden">Duration of Job</label
+            ><br />
+            <input
+              type="text"
+              id="duration"
+              name="duration"
+              placeholder="Duration of Job"
+            />
+            <!-- due date -->
+            <label for="due-date" class="visually-hidden">Due Date</label><br />
+            <input
+              type="text"
+              id="dueDate"
+              name="due-date"
+              placeholder="Due Date"
+            />
+          </div>
+          <div class="col-6">
+            <!-- languages -->
+            <label for="languages" class="visually-hidden">Languages</label
+            ><br />
+            <input
+              type="text"
+              id="languages"
+              name="languages"
+              placeholder="Languages*"
+              required
+            />
+            <!-- job type -->
+            <fieldset id="jobType">
+              <legend>Job Type</legend>
+              <label>
+                <input
+                  type="checkbox"
+                  name="jobType"
+                  value="Legal-government"
+                />
+                Legal/Government
+              </label>
+              <label>
+                <input type="checkbox" name="jobType" value="private-entity" />
+                Private Entity
+              </label>
+              <label>
+                <input type="checkbox" name="jobType" value="marketing" />
+                Marketing
+              </label>
+              <label>
+                <input type="checkbox" name="jobType" value="other" />
+                Other
+              </label>
+            </fieldset>
+            <!-- details -->
+            <label for="details" class="visually-hidden">Message*</label><br />
+            <textarea
+              id="details"
+              name="details"
+              rows="5"
+              placeholder="Provide any additional details"
+            ></textarea>
+          </div>
+        </div>
+        <div class="row justify-center">
+          <button class="primary col-2">Submit</button>
+        </div>
+      </form>
+    </section>
     <!-- FOOTER -->
     <footer class="site-footer">
       <div class="container row justify-between">
