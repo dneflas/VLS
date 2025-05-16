@@ -109,6 +109,10 @@ button.tertiary:hover {
 .med-heading {
   font-size: 3.5rem;
 }
+.sm-heading {
+  font-size: 2rem;
+  line-height: 1;
+}
 
 .background-primary {
   background-color: var(--primary-color);
