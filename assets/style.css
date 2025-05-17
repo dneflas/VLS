@@ -34,7 +34,7 @@ h1 {
 
 a {
   text-decoration: none;
-  color: var(--dark);
+  color: inherit;
 }
 
 a:hover {
@@ -143,8 +143,8 @@ button.tertiary:hover {
   color: var(--gray);
   font-size: 12px;
 }
-.site-footer a {
-  color: var(--gray);
+.site-footer p {
+  font-size: 12px;
 }
 
 .site-footer a:hover {
