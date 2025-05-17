@@ -1,11 +1,3 @@
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-link");
-const header = document.getElementById("site-header");
-const headerHeight = header.offsetHeight;
-
-//   get current year for footer
-document.getElementById("year").textContent = new Date().getFullYear();
-
 //  create nav active classes based on scroll
 window.addEventListener("scroll", () => {
   let current = "";
@@ -13,7 +5,7 @@ window.addEventListener("scroll", () => {
   console.log("height", headerHeight);
 
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop - headerHeight;
+    const sectionTop = section.offsetTop - headerHeight - 1;
     if (scrollY >= sectionTop) {
       current = section.getAttribute("id");
     }
@@ -24,15 +16,6 @@ window.addEventListener("scroll", () => {
     if (link.getAttribute("href") === "#" + current) {
       link.classList.add("active");
     }
-  });
-});
-
-//  sticky header offset
-document.addEventListener("DOMContentLoaded", () => {
-  const anchorTargets = document.querySelectorAll("section[id]");
-
-  anchorTargets.forEach((target) => {
-    target.style.scrollMarginTop = `${headerHeight}px`;
   });
 });
 
