@@ -35,3 +35,16 @@ document.addEventListener("DOMContentLoaded", () => {
     target.style.scrollMarginTop = `${headerHeight}px`;
   });
 });
+
+// slide in on scroll animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("in-view");
+    }
+  });
+});
+
+document
+  .querySelectorAll(".slide-animation")
+  .forEach((el) => observer.observe(el));

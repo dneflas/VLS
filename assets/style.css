@@ -676,3 +676,20 @@ button.tertiary:hover {
     transform: translateY(0);
   }
 }
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 1s ease-out;
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1s ease-out;
+}
+
+.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
