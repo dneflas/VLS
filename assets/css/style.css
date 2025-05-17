@@ -103,10 +103,6 @@ button.tertiary:hover {
   text-align: center;
 }
 
-.text-bold {
-  font-weight: bold;
-}
-
 .big-heading {
   font-size: 4.5rem;
   font-weight: normal;
@@ -119,6 +115,10 @@ button.tertiary:hover {
 .sm-heading {
   font-size: 2rem;
   line-height: 1;
+}
+
+.text-bold {
+  font-weight: bold;
 }
 
 .background-primary {
@@ -227,18 +227,19 @@ textarea {
   border: none;
   border-bottom: 1px solid var(--dark);
   font-family: inherit;
+  font-size: 18px;
 }
 input {
   height: 3rem;
-  font-size: 18px;
 }
 
 fieldset input {
   width: auto;
+  /* margin-bottom: 1rem; */
 }
 form label {
   line-height: 0;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 /* testimonial carousel styling */
@@ -295,6 +296,14 @@ form label {
   background-repeat: no-repeat;
   width: 100%; /* fills its column */
   height: 100%; /* if parent has height */
+}
+
+/* client styling */
+#client-hero {
+  min-height: 500px;
+  background-image: url("../images/client-bg.png");
+  background-size: cover;
+  background-position: center center;
 }
 /* ===== FLEX UTILITIES ===== */
 .d-flex {

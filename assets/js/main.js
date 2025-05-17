@@ -1,4 +1,3 @@
-const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
 const header = document.getElementById("site-header");
 const headerHeight = header.offsetHeight;

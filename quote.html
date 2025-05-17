@@ -48,14 +48,14 @@
     </header>
     <!-- QUOTE FORM -->
     <section class="container">
-      <h1 class="big-heading py-5">
+      <h1 class="big-heading py-5 px-5">
         Let’s Talk Details —<br />
         Get Your Custom Quote Today!
       </h1>
 
       <form action="" class="container">
         <!-- Type of service fieldset -->
-        <fieldset id="typeOfServiceField">
+        <fieldset id="typeOfServiceField" class="px-3">
           <legend>Type of Service*</legend>
           <label>
             <input type="checkbox" name="services" value="interpreting" />
@@ -71,61 +71,37 @@
           </label>
         </fieldset>
         <div class="row">
-          <div class="col-6">
+          <div class="col-6 px-3">
             <!-- name -->
-            <label for="name" class="visually-hidden">Name*</label><br />
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Name*"
-              required
-            />
+            <label for="name" class="">Name*</label><br />
+            <input type="text" id="name" name="name" placeholder="" required />
             <!-- email -->
-            <label for="email" class="visually-hidden">Email*</label><br />
+            <label for="email" class="">Email*</label><br />
             <input
               type="email"
               id="email"
               name="email"
-              placeholder="Email*"
+              placeholder=""
               required
             />
             <!-- phone -->
-            <label for="phone" class="visually-hidden">Phone Number</label
-            ><br />
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Phone Number"
-            />
+            <label for="phone" class="">Phone Number</label><br />
+            <input type="tel" id="phone" name="phone" placeholder="" />
             <!-- duration -->
-            <label for="duration" class="visually-hidden">Duration of Job</label
-            ><br />
-            <input
-              type="text"
-              id="duration"
-              name="duration"
-              placeholder="Duration of Job"
-            />
+            <label for="duration" class="">Duration of Job</label><br />
+            <input type="text" id="duration" name="duration" placeholder="" />
             <!-- due date -->
-            <label for="due-date" class="visually-hidden">Due Date</label><br />
-            <input
-              type="text"
-              id="dueDate"
-              name="due-date"
-              placeholder="Due Date"
-            />
+            <label for="due-date" class="">Due Date</label><br />
+            <input type="text" id="dueDate" name="due-date" placeholder="" />
           </div>
-          <div class="col-6">
+          <div class="col-6 px-3">
             <!-- languages -->
-            <label for="languages" class="visually-hidden">Languages</label
-            ><br />
+            <label for="languages" class="">Languages</label><br />
             <input
               type="text"
               id="languages"
               name="languages"
-              placeholder="Languages*"
+              placeholder=""
               required
             />
             <!-- job type -->
@@ -153,12 +129,13 @@
               </label>
             </fieldset>
             <!-- details -->
-            <label for="details" class="visually-hidden">Message*</label><br />
+            <label for="details" class="">Provide any additional details</label
+            ><br />
             <textarea
               id="details"
               name="details"
-              rows="5"
-              placeholder="Provide any additional details"
+              rows="8"
+              placeholder=""
             ></textarea>
           </div>
         </div>
