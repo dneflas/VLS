@@ -76,8 +76,8 @@ button.secondary {
 }
 
 button.secondary:hover {
-  background-color: var(--light);
-  color: var(--dark);
+  background-color: var(--gray);
+  color: var(--light);
 }
 
 button.tertiary {
@@ -221,6 +221,48 @@ button.tertiary:hover {
   white-space: nowrap;
   border: 0;
 }
+/* TESTIMONIAL CAROUSEL STYLING */
+#testimonial {
+  margin: auto;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 1rem;
+  min-height: 320px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#review-text {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+#review-author {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--gray);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
 #home {
   min-height: 90vh;
 }
