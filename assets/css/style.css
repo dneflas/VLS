@@ -209,7 +209,7 @@ button.tertiary:hover {
   margin: 0 20px;
 }
 
-/* FORM STYLING */
+/* form styling */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -221,6 +221,26 @@ button.tertiary:hover {
   white-space: nowrap;
   border: 0;
 }
+input,
+textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--dark);
+  font-family: inherit;
+}
+input {
+  height: 3rem;
+  font-size: 18px;
+}
+
+fieldset input {
+  width: auto;
+}
+form label {
+  line-height: 0;
+  font-size: 15px;
+}
+
 /* testimonial carousel styling */
 #testimonial {
   margin: auto;
@@ -263,7 +283,7 @@ button.tertiary:hover {
   background-color: #333;
 }
 
-/* HERO STYLING */
+/* home styling */
 #home {
   min-height: 90vh;
 }
