@@ -6,7 +6,7 @@ const headerHeight = header.offsetHeight;
 //   get current year for footer
 document.getElementById("year").textContent = new Date().getFullYear();
 
-//Create nav active classes based on scroll
+//  create nav active classes based on scroll
 window.addEventListener("scroll", () => {
   let current = "";
 
@@ -27,7 +27,7 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// sticky header offset
+//  sticky header offset
 document.addEventListener("DOMContentLoaded", () => {
   const anchorTargets = document.querySelectorAll("section[id]");
 
@@ -56,8 +56,16 @@ const reviews = [
     author: "– Drew Child Development Corp.",
     logo: "./assets/images/clients/drew.png",
   },
-  { text: "Highly professional and reliable.", author: "– Jordan M." },
-  { text: "Excellent translators, quick turnaround!", author: "– Casey L." },
+  {
+    text: "Vera Language Services has provided our firm written translation of training programs, live training presentation, as well as interview interpreting. They are responsive, easy to work with and always deliver quickly and on time. A wonderful resource. ",
+    author: "– Progressive Management Resources, Inc.",
+    logo: "./assets/images/clients/pmr.png",
+  },
+  {
+    text: "Our office has used Vera Language Services many times for translations of legal documents in Spanish and Japanese, interpreting during in person meetings, as well as communications with clients in other countries.  They offer comprehensive and efficient translation and interpreting services. Not to mention they are very friendly, attentive to each project, and they provide fast turnaround time. There is no need to look elsewhere when it comes to translation needs!",
+    author: "– Law Offices of Phillip L. Tangalakis",
+    logo: "./assets/images/clients/logo-placeholder.png",
+  },
 ];
 
 let index = 0;
@@ -89,5 +97,4 @@ function showReview(i) {
   renderDots();
 }
 
-// Initialize
 showReview(index);
