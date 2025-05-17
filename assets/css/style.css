@@ -269,7 +269,7 @@ button.tertiary:hover {
 }
 #home-image {
   min-height: 90vh;
-  background-image: url("./images/hero-image.png"); /* adjust the path as needed */
+  background-image: url("../images/hero-image.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
