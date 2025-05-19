@@ -305,6 +305,12 @@ form label {
   background-size: cover;
   background-position: center center;
 }
+
+/* about styling */
+.about-graphic {
+  width: 50%;
+}
+
 /* ===== FLEX UTILITIES ===== */
 .d-flex {
   display: flex;
