@@ -99,6 +99,15 @@ button.tertiary:hover {
 .text-dark {
   color: var(--dark);
 }
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
 .text-center {
   text-align: center;
 }
