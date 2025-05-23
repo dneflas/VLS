@@ -506,9 +506,23 @@ form label {
     width: 25%;
     max-width: 25%;
   }
+
+  .lg-col-4 {
+    width: 33.3333%;
+    max-width: 33.3333%;
+  }
+  .lg-col-5 {
+    width: 41.6666%;
+    max-width: 41.6666%;
+  }
+
   .lg-col-6 {
     width: 50%;
     max-width: 50%;
+  }
+  .lg-col-7 {
+    width: 58.3333%;
+    max-width: 58.3333%;
   }
   .lg-col-12 {
     width: 100%;
