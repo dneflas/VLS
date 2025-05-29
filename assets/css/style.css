@@ -324,6 +324,19 @@ form label {
   min-height: 500px;
   background-image: url("../images/client-bg.png");
   background-size: cover;
+  background-position: center top;
+}
+
+.client-logos img {
+  height: 70px;
+  margin: var(--space-md);
+}
+
+/* team styling */
+#team-hero {
+  min-height: 500px;
+  background-image: url("../images/team-bg.png");
+  background-size: cover;
   background-position: center center;
 }
 
