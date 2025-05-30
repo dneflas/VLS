@@ -53,6 +53,7 @@ p {
 /* Basic Button Styles */
 button {
   padding: 15px 20px;
+  margin: 10px 0;
   font-size: 16px;
   font-weight: bold;
   border: none;
@@ -415,7 +416,8 @@ fieldset {
 
 /* about styling */
 .about-graphic {
-  width: 50%;
+  width: 75%;
+  margin: var(--space-md) 0;
 }
 
 /* ===== FLEX UTILITIES ===== */
@@ -582,6 +584,18 @@ fieldset {
   .logo img {
     height: 70px;
   }
+  iframe {
+    width: 560px;
+    height: 315px;
+  }
+
+  .sm-text-left {
+    text-align: left;
+  }
+
+  .sm-text-right {
+    text-align: right;
+  }
 }
 
 @media (min-width: 768px) {
@@ -596,6 +610,10 @@ fieldset {
   .md-col-12 {
     width: 100%;
     max-width: 100%;
+  }
+
+  .about-graphic {
+    width: 50%;
   }
 }
 
