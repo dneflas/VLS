@@ -14,6 +14,12 @@
   --light: #fff;
   --dark: #000;
   --gray: #a6a6a6;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 5rem;
 }
 
 html {
@@ -402,8 +408,15 @@ fieldset {
 }
 
 .client-logos img {
+  flex: 0 1 50px;
   max-height: 70px;
+  width: auto;
+  max-width: 80%;
   margin: var(--space-md);
+}
+
+.flex-shrink-3 {
+  flex-shrink: 3 !important;
 }
 
 /* team styling */
@@ -443,6 +456,10 @@ fieldset {
 
 .flex-nowrap {
   flex-wrap: nowrap;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
 }
 
 .align-items-start {
@@ -599,6 +616,13 @@ fieldset {
 }
 
 @media (min-width: 768px) {
+  :root {
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 5rem;
+  }
   .md-col-4 {
     width: 33.3333%;
     max-width: 33.3333%;
@@ -643,6 +667,19 @@ fieldset {
   .lg-col-8 {
     width: 66.6666%;
     max-width: 66.6666%;
+  }
+
+  .lg-col-9 {
+    width: 75%;
+    max-width: 75%;
+  }
+  .lg-col-10 {
+    width: 83.3333%;
+    max-width: 83.3333%;
+  }
+  .lg-col-11 {
+    width: 91.6666%;
+    max-width: 91.6666%;
   }
   .lg-col-12 {
     width: 100%;
@@ -692,13 +729,6 @@ fieldset {
 }
 
 /* ===== SPACING UTILITIES ===== */
-:root {
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 2rem;
-  --space-lg: 4rem;
-  --space-xl: 5rem;
-}
 
 .m-0 {
   margin: 0 !important;
