@@ -267,6 +267,44 @@ form label {
   font-size: 16px;
 }
 
+fieldset {
+  border: none;
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
+
+.checkbox-row {
+  display: flex;
+  gap: 2rem;
+}
+
+.checkbox-row label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quote-options {
+  display: flex;
+  flex-wrap: wrap; /* allows wrapping if screen is narrow */
+  gap: 1.5rem;
+  padding: 1rem 0;
+  justify-content: space-around;
+}
+
+.quote-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 120px;
+}
+
+.quote-option img {
+  max-width: 60px;
+  margin-bottom: 0.5rem;
+}
+
 /* testimonial carousel styling */
 #testimonial {
   margin: auto;

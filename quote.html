@@ -57,18 +57,40 @@
         <!-- Type of service fieldset -->
         <fieldset id="typeOfServiceField" class="px-3">
           <legend>Type of Service*</legend>
-          <label>
-            <input type="checkbox" name="services" value="interpreting" />
-            Interpreting
-          </label>
-          <label>
-            <input type="checkbox" name="services" value="translation" />
-            Translation
-          </label>
-          <label>
-            <input type="checkbox" name="services" value="consultation" />
-            Consultation
-          </label>
+          <div class="quote-options">
+            <label class="quote-option">
+              <img
+                src="./assets/images/services-graphic-1-black.png"
+                alt="interpreting graphic"
+              />
+              <input type="checkbox" name="services" value="interpreting" />
+              Interpreting
+            </label>
+            <label class="quote-option">
+              <img
+                src="./assets/images/services-graphic-2-black.png"
+                alt="translation graphic"
+              />
+              <input type="checkbox" name="services" value="translation" />
+              Translation
+            </label>
+            <label class="quote-option">
+              <img
+                src="./assets/images/services-graphic-3- black.png"
+                alt="transcription graphic"
+              />
+              <input type="checkbox" name="services" value="transcription" />
+              Transcription
+            </label>
+            <label class="quote-option">
+              <img
+                src="./assets/images/services-graphic-4-black.png"
+                alt="consultation graphic"
+              />
+              <input type="checkbox" name="services" value="consultation" />
+              Consultation
+            </label>
+          </div>
         </fieldset>
         <div class="row">
           <div class="col-6 px-3">
@@ -107,26 +129,32 @@
             <!-- job type -->
             <fieldset id="jobType">
               <legend>Job Type</legend>
-              <label>
-                <input
-                  type="checkbox"
-                  name="jobType"
-                  value="Legal-government"
-                />
-                Legal/Government
-              </label>
-              <label>
-                <input type="checkbox" name="jobType" value="private-entity" />
-                Private Entity
-              </label>
-              <label>
-                <input type="checkbox" name="jobType" value="marketing" />
-                Marketing
-              </label>
-              <label>
-                <input type="checkbox" name="jobType" value="other" />
-                Other
-              </label>
+              <div class="checkbox-row">
+                <label>
+                  <input
+                    type="checkbox"
+                    name="jobType"
+                    value="Legal-government"
+                  />
+                  Legal/Government
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="jobType"
+                    value="private-entity"
+                  />
+                  Private Entity
+                </label>
+                <label>
+                  <input type="checkbox" name="jobType" value="marketing" />
+                  Marketing
+                </label>
+                <label>
+                  <input type="checkbox" name="jobType" value="other" />
+                  Other
+                </label>
+              </div>
             </fieldset>
             <!-- details -->
             <label for="details" class="">Provide any additional details</label
@@ -134,12 +162,12 @@
             <textarea
               id="details"
               name="details"
-              rows="8"
+              rows="7"
               placeholder=""
             ></textarea>
           </div>
         </div>
-        <div class="row justify-center">
+        <div class="row justify-center py-3">
           <button class="primary col-2">Submit</button>
         </div>
       </form>
