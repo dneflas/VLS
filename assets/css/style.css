@@ -112,6 +112,10 @@ button.tertiary:hover {
   text-align: center;
 }
 
+.text-italic {
+  font-style: italic;
+}
+
 .big-heading {
   font-size: 4.5rem;
   font-weight: normal;
@@ -328,7 +332,7 @@ form label {
 }
 
 .client-logos img {
-  height: 70px;
+  max-height: 70px;
   margin: var(--space-md);
 }
 
