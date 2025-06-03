@@ -123,6 +123,15 @@ button.tertiary:hover {
   font-style: italic;
 }
 
+.page-title {
+  color: var(--light);
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  padding-bottom: var(--space-lg);
+}
+
 .big-heading {
   font-size: 3rem;
   font-weight: normal;
@@ -600,7 +609,8 @@ fieldset {
     font-size: 3.5rem;
   }
 
-  .big-heading {
+  .big-heading,
+  .page-title {
     font-size: 4.5rem;
   }
 
