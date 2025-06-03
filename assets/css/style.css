@@ -433,6 +433,12 @@ fieldset {
   margin: var(--space-md) 0;
 }
 
+.about-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* ===== FLEX UTILITIES ===== */
 .d-flex {
   display: flex;
