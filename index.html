@@ -55,8 +55,10 @@
     </header>
     <!-- HERO SECTION -->
     <section id="home">
-      <div class="row align-items-center">
-        <div class="col-12 lg-col-6 px-5">
+      <div class="row align-items-center reverse-desktop">
+        <div class="col-12 lg-col-6" id="home-image"></div>
+
+        <div class="col-12 lg-col-6 px-5 py-4">
           <h1 class="med-heading">
             <div class="slide-in delay-0">Bridging Language</div>
             <div class="slide-in delay-1">Barriers,</div>
@@ -72,7 +74,8 @@
           >
           <a href="#about"><button class="tertiary">About Us</button></a>
         </div>
-        <div class="col-12 lg-col-6" id="home-image"></div>
+        <!-- background hero image -->
+        <!-- <div class="col-12 lg-col-6" id="home-image"></div> -->
       </div>
     </section>
     <!-- ABOUT SECTION -->
@@ -293,7 +296,7 @@
         </div>
 
         <div class="row justify-center py-5">
-          <h3 class="sm-heading col-12 lg-col-3">Proven Expertise In</h3>
+          <h3 class="sm-heading col-12 lg-col-3 mb-2">Proven Expertise In</h3>
           <p class="col-12 lg-col-7">
             <span class="text-bold">Legal Professionals </span> – Law firms and
             courts that require certified translations for legal documents or
@@ -389,8 +392,9 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="site-footer pb-3">
-      <div class="container row justify-between">
+    <footer class="site-footer">
+      <!-- desktop footer -->
+      <div class="container row justify-between hide-on-mobile pb-3">
         <div class="d-flex flex-column justify-end">
           <p>We're available 24/7</p>
           <a href="mailto:interpreting@verlanguageservices.com"
@@ -411,6 +415,32 @@
             Copyright&copy; <span id="year"></span> Vera Language Services - All
             Rights Reserved.
           </p>
+        </div>
+      </div>
+
+      <!-- mobile footer -->
+      <div class="container hide-on-desktop py-3">
+        <div class="d-flex flex-column">
+          <p>We're available 24/7</p>
+          <a href="mailto:interpreting@verlanguageservices.com"
+            ><i class="fa-solid fa-envelope"></i>
+            interpreting@veralanguageservices.com</a
+          >
+          <a href="tel:+1234567890"
+            ><i class="fa-solid fa-phone"></i>(123) 456 7890</a
+          >
+          <div class="text-center">
+            <img
+              src="./assets/images/favicon-512.png"
+              alt="logo"
+              class="footer-logo"
+            />
+            <p>
+              Copyright&copy; <span id="year"></span> Vera Language Services
+              <br />
+              All Rights Reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
