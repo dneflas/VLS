@@ -348,7 +348,7 @@ fieldset {
 }
 
 .quote-option img {
-  max-width: 60px;
+  max-width: 100px;
   margin-bottom: 0.5rem;
 }
 
@@ -658,6 +658,11 @@ fieldset {
 }
 
 @media (min-width: 992px) {
+  .lg-col-2 {
+    width: 16.6666%;
+    max-width: 16.6666%;
+  }
+
   .lg-col-3 {
     width: 25%;
     max-width: 25%;
@@ -722,6 +727,14 @@ fieldset {
   .nav-link {
     padding: 0 1rem;
     display: inline-block;
+  }
+
+  .form-container {
+    padding: 3rem 5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  .quote-option img {
+    max-width: 70px;
   }
 
   .reverse-desktop {

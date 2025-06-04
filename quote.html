@@ -48,14 +48,14 @@
     </header>
     <!-- QUOTE FORM -->
     <section class="container">
-      <h1 class="big-heading text-primary py-5 px-5">
+      <h1 class="big-heading text-primary py-5">
         Let’s Talk Details —<br />
         Get Your Custom Quote Today!
       </h1>
 
-      <form action="" class="container">
+      <form action="" class="form-container">
         <!-- Type of service fieldset -->
-        <fieldset id="typeOfServiceField" class="px-3">
+        <fieldset id="typeOfServiceField" class="">
           <legend>Type of Service*</legend>
           <div class="quote-options">
             <label class="quote-option">
@@ -84,6 +84,14 @@
             </label>
             <label class="quote-option">
               <img
+                src="./assets/images/service-graphic-5-black.png"
+                alt="consultation graphic"
+              />
+              <input type="checkbox" name="services" value="localization" />
+              Localization
+            </label>
+            <label class="quote-option">
+              <img
                 src="./assets/images/services-graphic-4-black.png"
                 alt="consultation graphic"
               />
@@ -93,7 +101,7 @@
           </div>
         </fieldset>
         <div class="row">
-          <div class="col-6 px-3">
+          <div class="col-12 lg-col-6">
             <!-- name -->
             <label for="name" class="">Name*</label><br />
             <input type="text" id="name" name="name" placeholder="" required />
@@ -116,7 +124,7 @@
             <label for="due-date" class="">Due Date</label><br />
             <input type="text" id="dueDate" name="due-date" placeholder="" />
           </div>
-          <div class="col-6 px-3">
+          <div class="col-12 lg-col-6">
             <!-- languages -->
             <label for="languages" class="">Languages</label><br />
             <input
@@ -168,7 +176,7 @@
           </div>
         </div>
         <div class="row justify-center py-3">
-          <button class="primary col-2">Submit</button>
+          <button class="primary col-10 lg-col-2">Submit</button>
         </div>
       </form>
     </section>
