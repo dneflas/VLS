@@ -246,7 +246,6 @@ button.tertiary:hover {
   background: var(--secondary-color);
   border-radius: 12px;
   padding: 20px;
-
   flex: 1 1 200px;
   color: var(--light);
   transition: all 0.3s ease;
@@ -272,6 +271,13 @@ button.tertiary:hover {
 
 .card p {
   margin: 0 20px;
+}
+
+.reviewer {
+  font-style: italic;
+  text-align: center;
+  padding-left: 20%;
+  padding-top: 15px;
 }
 
 .card:hover {
@@ -740,6 +746,11 @@ fieldset {
   .card {
     flex: 1 1 30%;
     max-width: 30%;
+  }
+
+  #testimonials .card {
+    flex: 1 1 75%;
+    max-width: 75%;
   }
 
   .form-container {
