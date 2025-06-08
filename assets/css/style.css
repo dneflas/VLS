@@ -236,19 +236,18 @@ button.tertiary:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 3rem 3rem;
+  padding: 3rem 0;
   justify-content: center;
 }
 
 .card {
   min-width: 290px;
-  width: 24%;
   max-width: 24%;
   background: var(--secondary-color);
   border-radius: 12px;
   padding: 20px;
-  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
-  flex: 1 1 200px; /* allows wrapping on smaller screens */
+
+  flex: 1 1 200px;
   color: var(--light);
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -738,10 +737,16 @@ fieldset {
     display: inline-block;
   }
 
+  .card {
+    flex: 1 1 30%;
+    max-width: 30%;
+  }
+
   .form-container {
     padding: 3rem 5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
+
   .quote-option img {
     max-width: 70px;
   }
@@ -774,6 +779,11 @@ fieldset {
   .xl-col-6 {
     width: 50%;
     max-width: 50%;
+  }
+
+  .card {
+    flex: 1 1 18%;
+    max-width: 18%;
   }
 }
 
