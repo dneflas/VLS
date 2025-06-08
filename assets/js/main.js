@@ -17,14 +17,17 @@ document.addEventListener("DOMContentLoaded", () => {
 // toggle mobile nav
 const toggleBtn = document.getElementById("menu-toggle");
 const mainNav = document.getElementById("main-nav");
+const iconSpan = toggleBtn.querySelector(".hamburger-icon");
 
 toggleBtn.addEventListener("click", () => {
   mainNav.classList.toggle("active");
+  toggleBtn.classList.toggle("open");
 });
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     mainNav.classList.remove("active");
+    toggleBtn.classList.remove("open");
   });
 });
 
