@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* Define Color Palette */
 :root {
   --primary-color: #1b5ea3;
@@ -32,7 +33,7 @@ body {
   line-height: 1.6;
   background-color: var(--light);
   color: var(--dark);
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   height: 100%;
 }
 
@@ -314,10 +315,6 @@ button.tertiary:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   background: var(--primary-color);
-}
-
-.slide-animation {
-  overflow-x: hidden;
 }
 
 /* form styling */
@@ -1071,6 +1068,18 @@ fieldset {
 }
 
 /* ===ANIMATIONS=== */
+
+.animation-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.animated-element {
+  transform: translateX(120%);
+  /* or use animation */
+}
+
 .slide-in {
   opacity: 0;
   transform: translateY(-50px); /* start above */
