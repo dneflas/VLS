@@ -33,6 +33,7 @@ body {
   background-color: var(--light);
   color: var(--dark);
   overflow-x: hidden;
+  height: 100%;
 }
 
 h1 {
