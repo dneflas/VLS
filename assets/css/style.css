@@ -358,6 +358,7 @@ fieldset {
 
 .checkbox-row {
   display: flex;
+  flex-flow: column wrap;
   gap: 2rem;
 }
 
@@ -806,6 +807,12 @@ fieldset {
 
   .quote-option img {
     max-width: 70px;
+  }
+
+  .checkbox-row {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
   }
 
   #team-hero,
