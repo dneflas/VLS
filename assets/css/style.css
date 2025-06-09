@@ -24,7 +24,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 /* Basic page setup */
@@ -314,6 +313,10 @@ button.tertiary:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   background: var(--primary-color);
+}
+
+.slide-animation {
+  overflow-x: hidden;
 }
 
 /* form styling */
