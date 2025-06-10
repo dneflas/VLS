@@ -439,8 +439,8 @@ fieldset {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%; /* fills its column */
-  height: 100%; /* if parent has height */
+  width: 100%;
+  height: 100%;
 }
 
 /* client styling */
@@ -485,7 +485,7 @@ fieldset {
 
 /* contact styling */
 .contact-info p {
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 /* ===== FLEX UTILITIES ===== */
@@ -707,6 +707,10 @@ fieldset {
 
   .about-graphic {
     width: 50%;
+  }
+
+  .contact-info p {
+    font-size: 18px;
   }
 }
 
