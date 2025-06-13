@@ -51,7 +51,7 @@ const reviews = [
   {
     text: "Our office has used Vera Language Services many times for translations of legal documents in Spanish and Japanese, interpreting during in person meetings, as well as communications with clients in other countries.  They offer comprehensive and efficient translation and interpreting services. Not to mention they are very friendly, attentive to each project, and they provide fast turnaround time. There is no need to look elsewhere when it comes to translation needs!",
     author: "– Law Offices of Phillip L. Tangalakis",
-    logo: "./assets/images/clients/logo-placeholder.png",
+    logo: "./assets/images/clients/client_7.png",
   },
 ];
 
