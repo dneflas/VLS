@@ -35,6 +35,7 @@ body {
   color: var(--dark);
   overflow-x: hidden !important;
   height: 100%;
+  max-width: 100%;
 }
 
 h1 {
@@ -388,6 +389,17 @@ fieldset {
 .quote-option img {
   max-width: 100px;
   margin-bottom: 0.5rem;
+}
+
+.success-message {
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  text-align: center;
 }
 
 /* testimonial carousel styling */

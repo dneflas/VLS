@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vera Language Services - Contact</title>
+    <title>Vera Language Services</title>
     <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="./assets/images/favicon-32.png" sizes="32x32" />
     <link rel="icon" href="./assets/images/favicon-512.png" sizes="512x512" />
@@ -39,9 +39,9 @@
 
         <!-- Navigation -->
         <nav id="main-nav" class="nav">
-          <a href="./index.html" class="nav-link">Home</a>
-          <a href="./index.html#about" class="nav-link">About</a>
-          <a href="./index.html#services" class="nav-link">Services</a>
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="nav-link">Services</a>
           <a href="./team.html" class="nav-link">Our Team</a>
           <a href="./clients.html" class="nav-link">Clients</a>
           <div class="">
@@ -55,59 +55,14 @@
         </nav>
       </div>
     </header>
-
-    <main>
-      <div class="container row justify-around py-5 align-items-center">
-        <section class="col-12 lg-col-6 mb-4">
-          <h1 class="big-heading text-primary">Contact Us</h1>
-          <p>
-            Ready to get started? Reach out to learn more about our language
-            services.
-          </p>
-          <div class="contact-info">
-            <div>
-              <h2 class="sm-heading py-3">We're available 24/7</h2>
-              <p>
-                <span class="text-bold">ADDRESS:</span><br />
-                6201 W. 87th Street. # 831, Los Angeles, California, 90045
-              </p>
-              <p class="py-3">
-                <span class="text-bold">EMAIL:</span><br />
-                <a href="mailto:interpreting@veralanguageservices.com"
-                  >interpreting@veralanguageservices.com</a
-                >
-              </p>
-              <p>
-                <span class="text-bold">PHONE:</span><br />
-                <a href="tel:+15555555555">(123)456 7890</a>
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- CONTACT FORM -->
-        <section class="col-12 lg-col-6">
-          <form action="contact.php" method="POST" class="form-container">
-            <label for="name">Name*</label><br />
-            <input type="text" id="name" name="name" required />
-
-            <label for="email" class="">Email*</label><br />
-            <input type="email" id="email" name="email" required />
-
-            <label for="phone" class="">Phone Number</label><br />
-            <input type="tel" id="phone" name="phone" />
-
-            <label for="message" class="">Message*</label><br />
-            <textarea id="message" name="message" rows="6" required></textarea>
-            <br />
-            <div class="row justify-center mt-2">
-              <button type="submit" class="primary col-3">Submit</button>
-            </div>
-          </form>
-        </section>
-      </div>
-    </main>
-
+    <section class="success-message">
+      <h1>Thank You!</h1>
+      <p>
+        Your message has been successfully sent. We will get back to you
+        shortly.
+      </p>
+      <a href="./index.html"><button class="primary">Back to Home</button></a>
+    </section>
     <!-- FOOTER -->
     <footer class="site-footer">
       <!-- desktop footer -->
@@ -161,6 +116,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="./assets/js/home.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
