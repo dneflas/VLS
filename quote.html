@@ -62,7 +62,11 @@
         Get Your Custom Quote Today!
       </h1>
 
-      <form action="" class="form-container">
+      <form
+        id="quote-form"
+        action="submit-form-handler.php"
+        class="form-container"
+      >
         <!-- Type of service fieldset -->
         <fieldset id="typeOfServiceField" class="px-2">
           <legend>Type of Service*</legend>
@@ -182,6 +186,15 @@
               rows="7"
               placeholder=""
             ></textarea>
+            <div style="display: none">
+              <label for="website">Do not fill this out if you're human</label>
+              <input
+                type="text"
+                name="website"
+                id="website"
+                autocomplete="off"
+              />
+            </div>
           </div>
         </div>
         <div class="row justify-center py-3">
@@ -243,5 +256,22 @@
       </div>
     </footer>
     <script src="./assets/js/main.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lerg2MrAAAAAFCtQdLNcDl9Pzqdld6ghDcVREy-"></script>
+    <script>
+      grecaptcha.ready(function () {
+        grecaptcha
+          .execute("6Lerg2MrAAAAAFCtQdLNcDl9Pzqdld6ghDcVREy-", {
+            action: "quote",
+          })
+          .then(function (token) {
+            document
+              .getElementById("quote-form")
+              .insertAdjacentHTML(
+                "beforeend",
+                `<input type="hidden" name="g-recaptcha-response" value="${token}">`
+              );
+          });
+      });
+    </script>
   </body>
 </html>

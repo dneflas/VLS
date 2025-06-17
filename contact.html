@@ -87,7 +87,12 @@
 
         <!-- CONTACT FORM -->
         <section class="col-12 lg-col-6">
-          <form action="contact.php" method="POST" class="form-container">
+          <form
+            id="contact-form"
+            action="submit-form-handler.php"
+            method="POST"
+            class="form-container"
+          >
             <label for="name">Name*</label><br />
             <input type="text" id="name" name="name" required />
 
@@ -100,6 +105,16 @@
             <label for="message" class="">Message*</label><br />
             <textarea id="message" name="message" rows="6" required></textarea>
             <br />
+            <div style="display: none">
+              <label for="website">Do not fill this out if you're human</label>
+              <input
+                type="text"
+                name="website"
+                id="website"
+                autocomplete="off"
+              />
+            </div>
+
             <div class="row justify-center mt-2">
               <button type="submit" class="primary col-3">Submit</button>
             </div>
@@ -162,5 +177,22 @@
       </div>
     </footer>
     <script src="./assets/js/main.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lerg2MrAAAAAFCtQdLNcDl9Pzqdld6ghDcVREy-"></script>
+    <script>
+      grecaptcha.ready(function () {
+        grecaptcha
+          .execute("6Lerg2MrAAAAAFCtQdLNcDl9Pzqdld6ghDcVREy-", {
+            action: "contact",
+          })
+          .then(function (token) {
+            document
+              .getElementById("contact-form")
+              .insertAdjacentHTML(
+                "beforeend",
+                `<input type="hidden" name="g-recaptcha-response" value="${token}">`
+              );
+          });
+      });
+    </script>
   </body>
 </html>

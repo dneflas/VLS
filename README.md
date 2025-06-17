@@ -72,10 +72,10 @@ return [
 
 ## 📝 Contact Form Handler
 
-- contact.php (or test-email.php) processes the form
+- contact.php processes the form
 - Sanitizes user input
 - Sends email via PHPMailer+SMTP
-- Redirects to thank-you.html on success
+- Redirects to success.html on success
 
 ## 📁 File Structure
 
@@ -84,9 +84,13 @@ VLS/
 ├── private/
 │ └── config.php
 └── public_html/
-├── index.html — Main website
-├── contact.php — Form handler
-├── thank-you.html — Post-submission page
+├── index.html — Homepage
+├── team.html — Team page
+├── clients.html — Client Page
+├── contact.html — Contact form page
+├── quote.html — Quote form page
+├── submit-form-handler.php — Form handler
+├── success.html — Post-submission page
 ├── phpmailer/ — PHPMailer classes
 └── assets/ — images, CSS, JS
 ```
