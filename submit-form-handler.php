@@ -15,12 +15,21 @@ require 'phpmailer/SMTP.php';
 // var_dump($_POST);
 // exit; 
 
+function respondJSON($status, $message) {
+    header('Content-Type: application/json');
+    echo json_encode([
+        'status' => $status,
+        'message' => $message
+    ]);
+    exit;
+}
+
 // Load credentials from config.php
 $config = require dirname(__DIR__) . '/private/config.php';
 
 // Fallback if config file is not loaded properly
 if (!$config || !is_array($config)) {
-    die("Configuration file is missing or invalid.");
+    respondJSON('error', 'Configuration error. Please contact the administrator.');
 }
 
 // Get form values
@@ -29,21 +38,37 @@ $formType = $_POST['form_type'] ?? '';
 
 // Honeypot spam check
 if (!empty($honeypot)) {
-    die("Spam detected.");
+    respondJSON('error', 'Spam detected.');
 }
 
-function redirectWithMessage($formType, $type, $messageKey) {
-    $location = ($formType === 'contact') ? 'contact.html' : 'quote.html';
-    header("Location: {$location}?{$type}={$messageKey}");
-    exit;
-}
+// function redirectWithMessage($formType, $type, $messageKey) {
+//     $location = ($formType === 'contact') ? 'contact.html' : 'quote.html';
+//     header("Location: {$location}?{$type}={$messageKey}");
+//     exit;
+// }
+
+
+    // let message = "There was an error submitting the form. Please try again.";
+
+    // if (error === "recaptcha") {
+    //   message = "We could not verify you as a human. Please try again.";
+    // } else if (error === "required") {
+    //   message = "Please fill in all required fields.";
+    // } else if (error === "server") {
+    //   message =
+    //     "There was a problem sending your message. Please try again later.";
+    // } else if (error === "invalid") {
+    //   message =
+    //     "There was an issue with the form. Please refresh and try again.";
+    // }
+
 
 // reCaptcha
 $recaptchaToken = $_POST['g-recaptcha-response'] ?? '';
 $recaptchaSecret = $config['recaptcha_secret']; 
 
 if (empty($recaptchaToken)) {
-    redirectWithMessage($formType, 'error', 'recaptcha');
+    respondJSON('error', 'We could not verify you as a human. Please try again.');
 }
 
 // Verify the token with Google's API
@@ -53,7 +78,7 @@ $recaptchaResponse = file_get_contents(
 $recaptchaData = json_decode($recaptchaResponse);
 
 if (!$recaptchaData->success || $recaptchaData->score < 0.3) {
-    redirectWithMessage($formType, 'error', 'recaptcha');
+    respondJSON('error', 'We could not verify you as a human. Please try again');
 }
 
 if ($formType === 'contact') {
@@ -64,7 +89,7 @@ if ($formType === 'contact') {
     $message = nl2br(htmlspecialchars(trim($_POST['message'])));
 
     if (empty($name) || empty($email) || empty($message)) {
-        redirectWithMessage($formType, 'error', 'required');
+        respondJSON('error', 'Please fill in all required fields.');
     }
 
     $subject = "New Contact Form Submission";
@@ -90,7 +115,7 @@ elseif ($formType === 'quote') {
     $jobTypes = isset($_POST['jobType']) ? (array)$_POST['jobType'] : [];
 
     if (empty($name) || empty($email) || empty($languages)) {
-        redirectWithMessage($formType, 'error', 'required');
+        respondJSON('error', 'Please fill in all required fields.');
     }
 
     $subject = "New Quote Request";
@@ -108,7 +133,7 @@ elseif ($formType === 'quote') {
     ";
 }
 else {
-    redirectWithMessage('quote', 'error', 'invalid');
+    respondJSON('error', 'Invalid form submission.');
 }
 
 
@@ -134,7 +159,7 @@ try {
 
     $mail->send();
      // Redirect on success
-    redirectWithMessage($formType, 'success', '1');
+    respondJSON('success', 'Thank you! Your message has been successfully sent. We will get back to you shortly.');
     // fallback incase header fails
     echo "Thank you for your submission."; 
 } catch (Exception $e) {
@@ -144,9 +169,9 @@ try {
     error_log(
         date('[Y-m-d H:i:s] ') . "Mailer Error: {$mail->ErrorInfo}\n",
         3,
-        __DIR__ . '/mail_error.log' // Save to same directory as the PHP script
+        __DIR__ . '/mail_error.log'
     );
-
-    echo "Message could not be sent. Please try again later.";
+    respondJSON('error', 'Message could not be sent. Please try again later.');
+    
 }
 ?>
