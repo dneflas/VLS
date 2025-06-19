@@ -391,15 +391,22 @@ fieldset {
   margin-bottom: 0.5rem;
 }
 
+.error-message {
+  background-color: #ffe0e0;
+  border: 1px solid #ff9999;
+  padding: 1em;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  color: #a10000;
+}
+
 .success-message {
-  margin: 0;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 60vh;
-  text-align: center;
+  background-color: #e7f9e9;
+  border: 1px solid #8cd790;
+  padding: 1em;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  color: #256029;
 }
 
 /* testimonial carousel styling */

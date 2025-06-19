@@ -137,3 +137,6 @@ dist
 
 .DS_Store
 config.php
+
+test-form.html
+test-form-handler.php

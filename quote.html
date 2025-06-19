@@ -142,7 +142,7 @@
           </div>
           <div class="col-12 lg-col-6">
             <!-- languages -->
-            <label for="languages" class="">Languages</label><br />
+            <label for="languages" class="">Languages*</label><br />
             <input
               type="text"
               id="languages"
@@ -203,6 +203,13 @@
         <div class="row justify-center py-3">
           <button class="primary col-10 lg-col-2">Submit</button>
         </div>
+        <!-- success/error  block -->
+        <div
+          id="form-success"
+          class="success-message"
+          style="display: none"
+        ></div>
+        <div id="form-error" class="error-message" style="display: none"></div>
       </form>
     </section>
     <!-- FOOTER -->
@@ -276,5 +283,6 @@
           });
       });
     </script>
+    <script src="./assets/js/forms.js"></script>
   </body>
 </html>

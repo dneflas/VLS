@@ -32,12 +32,18 @@ if (!empty($honeypot)) {
     die("Spam detected.");
 }
 
+function redirectWithMessage($formType, $type, $messageKey) {
+    $location = ($formType === 'contact') ? 'contact.html' : 'quote.html';
+    header("Location: {$location}?{$type}={$messageKey}");
+    exit;
+}
+
 // reCaptcha
 $recaptchaToken = $_POST['g-recaptcha-response'] ?? '';
 $recaptchaSecret = $config['recaptcha_secret']; 
 
 if (empty($recaptchaToken)) {
-    die('reCAPTCHA token missing.');
+    redirectWithMessage($formType, 'error', 'recaptcha');
 }
 
 // Verify the token with Google's API
@@ -47,7 +53,7 @@ $recaptchaResponse = file_get_contents(
 $recaptchaData = json_decode($recaptchaResponse);
 
 if (!$recaptchaData->success || $recaptchaData->score < 0.3) {
-    die('reCAPTCHA verification failed. Please try again.');
+    redirectWithMessage($formType, 'error', 'recaptcha');
 }
 
 if ($formType === 'contact') {
@@ -58,7 +64,7 @@ if ($formType === 'contact') {
     $message = nl2br(htmlspecialchars(trim($_POST['message'])));
 
     if (empty($name) || empty($email) || empty($message)) {
-        die("Please fill in all required fields.");
+        redirectWithMessage($formType, 'error', 'required');
     }
 
     $subject = "New Contact Form Submission";
@@ -84,7 +90,7 @@ elseif ($formType === 'quote') {
     $jobTypes = isset($_POST['jobType']) ? (array)$_POST['jobType'] : [];
 
     if (empty($name) || empty($email) || empty($languages)) {
-        die("Please fill in all required fields.");
+        redirectWithMessage($formType, 'error', 'required');
     }
 
     $subject = "New Quote Request";
@@ -102,7 +108,7 @@ elseif ($formType === 'quote') {
     ";
 }
 else {
-    die("Invalid form submission.");
+    redirectWithMessage('quote', 'error', 'invalid');
 }
 
 
@@ -128,12 +134,11 @@ try {
 
     $mail->send();
      // Redirect on success
-    header("Location: success.html");
-    exit;
+    redirectWithMessage($formType, 'success', '1');
     // fallback incase header fails
     echo "Thank you for your submission."; 
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    redirectWithMessage($formType, 'error', 'server');
 
     // Log error to a file
     error_log(
