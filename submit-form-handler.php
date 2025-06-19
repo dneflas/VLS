@@ -7,6 +7,14 @@ require 'phpmailer/Exception.php';
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 
+
+// DEBUGGING
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
+// var_dump($_POST);
+// exit; 
+
 // Load credentials from config.php
 $config = require dirname(__DIR__) . '/private/config.php';
 
@@ -107,7 +115,7 @@ try {
     $mail->SMTPAuth = true;
     $mail->Username = $config['smtp_user'];
     $mail->Password = $config['smtp_pass'];
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Or PHPMailer:ENCRYPTION_STARTTLS
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Or PHPMailer:ENCRYPTION_STARTTLS;
     $mail->Port = $config['smtp_port'];
     // Recipients
     $mail->setFrom($config['smtp_user'], 'Vera Language Services');
@@ -125,7 +133,7 @@ try {
     // fallback incase header fails
     echo "Thank you for your submission."; 
 } catch (Exception $e) {
-    // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 
     // Log error to a file
     error_log(
