@@ -8,13 +8,6 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 
 
-// DEBUGGING
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
-// var_dump($_POST);
-// exit; 
-
 function respondJSON($status, $message) {
     header('Content-Type: application/json');
     echo json_encode([
@@ -40,28 +33,6 @@ $formType = $_POST['form_type'] ?? '';
 if (!empty($honeypot)) {
     respondJSON('error', 'Spam detected.');
 }
-
-// function redirectWithMessage($formType, $type, $messageKey) {
-//     $location = ($formType === 'contact') ? 'contact.html' : 'quote.html';
-//     header("Location: {$location}?{$type}={$messageKey}");
-//     exit;
-// }
-
-
-    // let message = "There was an error submitting the form. Please try again.";
-
-    // if (error === "recaptcha") {
-    //   message = "We could not verify you as a human. Please try again.";
-    // } else if (error === "required") {
-    //   message = "Please fill in all required fields.";
-    // } else if (error === "server") {
-    //   message =
-    //     "There was a problem sending your message. Please try again later.";
-    // } else if (error === "invalid") {
-    //   message =
-    //     "There was an issue with the form. Please refresh and try again.";
-    // }
-
 
 // reCaptcha
 $recaptchaToken = $_POST['g-recaptcha-response'] ?? '';
@@ -152,6 +123,7 @@ try {
     $mail->setFrom($config['smtp_user'], 'Vera Language Services');
     $mail->addReplyTo($email, $name);
     $mail->addAddress($config['recipient_email']);
+    $mail->addCC($config['cc_email']);
     // Content
     $mail->isHTML(true);
     $mail->Subject = $subject;
@@ -163,8 +135,6 @@ try {
     // fallback incase header fails
     echo "Thank you for your submission."; 
 } catch (Exception $e) {
-    redirectWithMessage($formType, 'error', 'server');
-
     // Log error to a file
     error_log(
         date('[Y-m-d H:i:s] ') . "Mailer Error: {$mail->ErrorInfo}\n",
