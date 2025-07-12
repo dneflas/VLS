@@ -427,6 +427,18 @@ fieldset {
   }
 }
 
+/* service item styling */
+.service-item {
+  transition: transform 0.3s ease;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.service-item:hover {
+  transform: scale(1.08);
+  font-weight: 500;
+}
+
 /* testimonial carousel styling */
 #testimonial {
   margin: auto;
